@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { Event, Disposable, EventEmitter } from 'vscode';
-import { dirname, sep, relative } from 'path';
-import { Readable } from 'stream';
-import { promises as fs, createReadStream } from 'fs';
-import * as byline from 'byline';
+import { dirname, sep, relative } from './nodeShims/path';
+import { Readable } from './nodeShims/stream';
+import { promises as fs, createReadStream } from './nodeShims/fs';
+import * as byline from './nodeShims/byline';
 
 export const isMacintosh = process.platform === 'darwin';
 export const isWindows = process.platform === 'win32';

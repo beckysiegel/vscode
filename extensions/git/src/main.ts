@@ -18,9 +18,10 @@ import TelemetryReporter from '@vscode/extension-telemetry';
 import { GitExtension } from './api/git';
 import { GitProtocolHandler } from './protocolHandler';
 import { GitExtensionImpl } from './api/extension';
-import * as path from 'path';
-import * as fs from 'fs';
-import * as os from 'os';
+import * as path from './nodeShims/path';
+import * as fs from './nodeShims/fs';
+import * as os from './nodeShims/os';
+
 import { GitTimelineProvider } from './timelineProvider';
 import { registerAPICommands } from './api/api1';
 import { TerminalEnvironmentManager } from './terminal';

@@ -6,10 +6,10 @@
 import { Disposable } from 'vscode';
 import { ITerminalEnvironmentProvider } from '../terminal';
 import { toDisposable } from '../util';
-import * as path from 'path';
-import * as http from 'http';
-import * as os from 'os';
-import * as fs from 'fs';
+import * as path from '../nodeShims/path';
+import * as http from '../nodeShims/http';
+import * as os from '../nodeShims/os';
+import * as fs from '../nodeShims/fs';
 import * as crypto from 'crypto';
 
 function getIPCHandlePath(id: string): string {

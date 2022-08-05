@@ -3,20 +3,20 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { promises as fs, exists, realpath } from 'fs';
-import * as path from 'path';
-import * as os from 'os';
-import * as cp from 'child_process';
-import { fileURLToPath } from 'url';
-import * as which from 'which';
-import { EventEmitter } from 'events';
+import { promises as fs, exists, realpath } from './nodeShims/fs';
+import * as path from './nodeShims/path';
+import * as os from './nodeShims/os';
+import * as cp from './nodeShims/child_process';
+import { fileURLToPath } from './nodeShims/url';
+import * as which from './nodeShims/which';
+import { EventEmitter } from './nodeShims/events';
 import * as iconv from '@vscode/iconv-lite-umd';
-import * as filetype from 'file-type';
+import * as filetype from './nodeShims/file-type';
 import { assign, groupBy, IDisposable, toDisposable, dispose, mkdirp, readBytes, detectUnicodeEncoding, Encoding, onceEvent, splitInChunks, Limiter, Versions, isWindows } from './util';
 import { CancellationToken, ConfigurationChangeEvent, Progress, Uri, workspace } from 'vscode';
 import { detectEncoding } from './encoding';
 import { Ref, RefType, Branch, Remote, ForcePushMode, GitErrorCodes, LogOptions, Change, Status, CommitOptions, BranchQuery } from './api/git';
-import * as byline from 'byline';
+import * as byline from './nodeShims/byline';
 import { StringDecoder } from 'string_decoder';
 
 // https://github.com/microsoft/vscode/issues/65693

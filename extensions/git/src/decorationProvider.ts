@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { window, workspace, Uri, Disposable, Event, EventEmitter, FileDecoration, FileDecorationProvider, ThemeColor } from 'vscode';
-import * as path from 'path';
+import * as path from './nodeShims/path';
 import { Repository, GitResourceGroup } from './repository';
 import { Model } from './model';
 import { debounce } from './decorators';

@@ -6,7 +6,7 @@
 'use strict';
 import { workspace, Uri } from 'vscode';
 import { getExtensionContext } from './main';
-import { TextDecoder } from 'util';
+import { TextDecoder } from './nodeShims/util';
 
 const emojiRegex = /:([-+_a-z0-9]+):/g;
 

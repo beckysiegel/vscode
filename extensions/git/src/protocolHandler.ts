@@ -5,7 +5,7 @@
 
 import { UriHandler, Uri, window, Disposable, commands } from 'vscode';
 import { dispose } from './util';
-import * as querystring from 'querystring';
+import * as querystring from './nodeShims/querystring';
 
 const schemes = new Set(['file', 'git', 'http', 'https', 'ssh']);
 

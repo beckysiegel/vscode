@@ -5,7 +5,7 @@
 
 import { window, InputBoxOptions, Uri, Disposable, workspace } from 'vscode';
 import { IDisposable, EmptyDisposable, toDisposable } from './util';
-import * as path from 'path';
+import * as path from './nodeShims/path';
 import { IIPCHandler, IIPCServer } from './ipc/ipcServer';
 import { CredentialsProvider, Credentials } from './api/git';
 import { ITerminalEnvironmentProvider } from './terminal';
